@@ -1,0 +1,17 @@
+﻿<ul class="navbar-nav">
+    <!-- Show when logged in -->
+    <li class="nav-item auth-logout" style="display: none;">
+        <a class="nav-link text-dark" href="#" title="Manage">Hello <span class="user-name"></span>!</a>
+    </li>
+    <li class="nav-item auth-logout" style="display: none;">
+        <button class="nav-link btn btn-link text-dark" onclick="handleLogout()">Logout</button>
+    </li>
+    
+    <!-- Show when not logged in -->
+    <li class="nav-item auth-login">
+        <a class="nav-link text-dark" href="/Identity/Account/Register">Register</a>
+    </li>
+    <li class="nav-item auth-login">
+        <a class="nav-link text-dark" href="/Identity/Account/Login">Login</a>
+    </li>
+</ul>

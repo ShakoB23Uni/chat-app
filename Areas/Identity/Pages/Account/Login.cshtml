@@ -1,0 +1,57 @@
+@page
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <h2>Demo Login</h2>
+                <hr />
+                <div id="error-message" class="text-danger mb-3" style="display: none;"></div>
+                
+                <div class="alert alert-info">
+                    <h5><i class="fas fa-info-circle"></i> Demo Account</h5>
+                    <p>Click the login button below to login as:</p>
+                    <ul class="mb-0">
+                        <li><strong>Name:</strong> shako</li>
+                        <li><strong>Email:</strong> shako@gmail.com</li>
+                        <li><strong>Password:</strong> 123</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-3">
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">
+                        <i class="fas fa-sign-in-alt"></i> Login as shako
+                    </button>
+                </div>
+                
+                <div class="text-center">
+                    <p>
+                        <a href="/Identity/Account/Register">Or register a new account</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h3>Instructions</h3>
+            <hr />
+            <div>
+                <p>
+                    Use the email and password you used during registration to log in.
+                </p>
+                <p>
+                    If you haven't registered yet, click <a href="/Identity/Account/Register">Register as a new user</a> to create an account.
+                </p>
+            </div>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} 
